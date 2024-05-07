@@ -1,1 +1,39 @@
-/*# sourceMappingURL=bio.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.header__title {
+  text-align: center;
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+  font-size: 0.875rem;
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  border-bottom: 6px solid white;
+}/*# sourceMappingURL=bio.css.map */
