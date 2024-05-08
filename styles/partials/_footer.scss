@@ -1,0 +1,41 @@
+.footer{
+    background-color: #323232;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight:700;
+    text-transform: capitalize;
+}
+
+.footer__title{
+    color: white;
+}
+
+.footer__icons{
+    display: flex;
+    gap:2rem;
+
+}
+
+.footer__contact{
+    color:white;
+}
+
+.footer__address{
+    color:#FAFAFA;
+}
+
+.footer__email{
+    color: #FAFAFA
+}
+
+.footer__logo{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight:700;
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer__copyright{
+    color:#FAFAFA;
+}

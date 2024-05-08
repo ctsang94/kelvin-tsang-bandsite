@@ -72,6 +72,127 @@ body {
   }
 }
 
+.navbar__item {
+  width: 50%;
+  text-align: center;
+  color: #AFAFAF;
+}
+
 .active {
   border-bottom: 6px solid white;
+  color: white;
+}
+
+.hero {
+  background-image: url(../../assets/images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #323232;
+}
+
+.hero__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  padding-left: 3rem;
+  text-transform: capitalize;
+}
+
+.overlay {
+  width: 100%;
+  height: 40vh;
+  background-color: rgba(50, 50, 50, 0.5);
+  z-index: 1;
+}
+
+.section__title {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+.section__img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+.section__quote {
+  font-weight: 700;
+}
+
+.section__vocalist {
+  font-weight: 700;
+}
+
+.section__subheader {
+  font-weight: 600;
+}
+
+.gallery__title {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.gallery__img {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  background-color: #323232;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.footer__title {
+  color: white;
+}
+
+.footer__icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__contact {
+  color: white;
+}
+
+.footer__address {
+  color: #FAFAFA;
+}
+
+.footer__email {
+  color: #FAFAFA;
+}
+
+.footer__logo {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+.footer__copyright {
+  color: #FAFAFA;
+}
+
+.section, .gallery, .footer {
+  padding: 0 1rem;
 }/*# sourceMappingURL=bio.css.map */
