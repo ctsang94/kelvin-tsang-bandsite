@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Avenir", sans-serif;
+  font-family: AvenirNextLTPro;
 }
 
 *,
@@ -19,9 +19,37 @@ body {
   font-weight: 700;
   color: white;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .header {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+  }
+}
 
 .header__title {
+  text-transform: uppercase;
   text-align: center;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .header__title {
+    padding-left: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__title {
+    padding-left: 3rem;
+  }
 }
 
 .navbar__list {
@@ -32,6 +60,16 @@ body {
   font-size: 0.875rem;
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .navbar__list {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar__list {
+    gap: 3rem;
+  }
 }
 
 .active {
