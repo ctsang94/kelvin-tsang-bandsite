@@ -1,3 +1,16 @@
+@use "./mixins" as *;
+@use "./font" as *;
+
+.section{
+    @include tablet{
+        padding: 0 2.25rem;
+    }
+    
+    @include desktop{
+        padding: 0 2.25rem;
+    }
+}
+
 .section__title{
     padding-top: 1.5rem;
     padding-bottom:1rem;

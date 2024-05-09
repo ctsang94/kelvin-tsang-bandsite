@@ -9,3 +9,8 @@ body {
   *::after {
     box-sizing: border-box;
   }
+
+  .section, .gallery, .footer{
+    padding: 0 1rem;
+}
+
