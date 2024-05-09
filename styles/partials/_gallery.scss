@@ -1,3 +1,6 @@
+@use "./mixins" as *;
+@use "./font" as *;
+
 .gallery__title{
     padding: 1rem 0;
     font-size: 1.5rem;
@@ -6,7 +9,20 @@
     text-transform: capitalize;
 }
 
+.gallery__container{
+    @include tablet{
+        display:flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        row-gap: 30px;
+
+    } 
+}
+
 .gallery__img{
     width:100%;
     height: auto;
+    @include tablet{
+        width: 30%;
+    }
 }

@@ -3,9 +3,9 @@
 
 .section{
     @include tablet{
-        padding: 0 2.25rem;
+        padding: 0 4rem;
     }
-    
+
     @include desktop{
         padding: 0 2.25rem;
     }
@@ -18,7 +18,10 @@
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
-    padding-left: 1rem;
+    @include tablet{
+        padding-top: 3rem;
+        padding-bottom: 2.25rem;
+    }
 }
 
 .section__img{
@@ -37,4 +40,15 @@
 
 .section__subheader{
     font-weight: 600;
+    text-transform: capitalize;
+    @include tablet{
+        padding-top: 1.5rem;
+    }
+}
+
+.section__paragraphs{
+    @include tablet{
+        display:flex;
+        justify-content: space-evenly;
+    }
 }
