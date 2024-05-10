@@ -51,5 +51,7 @@
     @include tablet{
         display:flex;
         justify-content: space-evenly;
+        gap: 1rem;
+        line-height: 1.75rem;
     }
 }

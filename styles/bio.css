@@ -37,7 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #323232;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 2rem;
   font-weight: 700;
   color: white;
@@ -60,11 +60,15 @@ body {
   }
 }
 
+.header__logo {
+  width: 7.5rem;
+  height: 1.25rem;
+  margin: 1rem;
+}
+
 .header__title {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 400;
-  font-family: AvenirNextLTPro;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .header__title {
@@ -80,13 +84,14 @@ body {
 .navbar__list {
   display: flex;
   list-style: none;
-  font-size: 0.875rem;
   padding: 0;
   margin: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .navbar__list {
     gap: 3rem;
+    font-size: 1rem;
+    padding-top: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -98,7 +103,10 @@ body {
 .navbar__item {
   width: 50%;
   text-align: center;
+  text-transform: capitalize;
   color: #AFAFAF;
+  padding-bottom: 1rem;
+  font-weight: 400;
 }
 
 .active {
@@ -189,6 +197,8 @@ body {
   .section__paragraphs {
     display: flex;
     justify-content: space-evenly;
+    gap: 1rem;
+    line-height: 1.75rem;
   }
 }
 

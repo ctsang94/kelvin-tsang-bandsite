@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     background-color: #323232;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2rem;
     font-weight:700;
     color: white;
@@ -27,12 +27,14 @@
         gap: 4rem;
     }
 }
-
+.header__logo{
+    width: 7.5rem;
+    height: 1.25rem;
+    margin: 1rem;
+}
 .header__title{
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 400;
-    font-family: AvenirNextLTPro;
+    display: flex;
+    justify-content: center;
     @include tablet{
         padding-left: 3rem;
     }
@@ -44,12 +46,13 @@
 .navbar__list{
     display:flex;
     list-style: none;
-    font-size: .875rem;
     padding: 0;
     margin: 0;
 
     @include tablet{
         gap: 3rem;
+        font-size: 1rem;
+        padding-top: 1rem;
     }
     @include desktop{
         gap: 3rem;
@@ -59,7 +62,15 @@
 .navbar__item{
     width:50%;
     text-align: center;
+    text-transform: capitalize;
     color: #AFAFAF;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    
+    @mixin tablet{
+        padding-top: 1rem;
+    }
+
 }
 
 .active{
