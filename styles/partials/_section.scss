@@ -19,8 +19,9 @@
     line-height: 2rem;
     font-weight: 700;
     @include tablet{
-        padding-top: 3rem;
-        padding-bottom: 2.25rem;
+        padding: 1rem 0;
+        font-size: 3.75rem;
+        font-weight:500;
     }
 }
 

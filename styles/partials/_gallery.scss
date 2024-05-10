@@ -7,12 +7,19 @@
     line-height: 2rem;
     font-weight: 700;
     text-transform: capitalize;
+    @include tablet{
+        padding: 1rem 2.5rem;
+        font-size: 3.75rem;
+        font-weight:500;
+    }
 }
 
 .gallery__container{
     @include tablet{
+        padding: 1rem 2rem;
         display:flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
         gap: 30px;
         row-gap: 30px;
 

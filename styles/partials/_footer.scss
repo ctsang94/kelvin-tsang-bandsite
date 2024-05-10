@@ -1,19 +1,80 @@
+@use "./mixins" as *;
+@use "./font" as *;
+
 .footer{
     background-color: #323232;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight:700;
     text-transform: capitalize;
+    font-family: 'AvenirNextLTPro';
+    
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 2rem;
+        width: 100%;
+    }
 }
+
+.flex-item{
+  @include tablet{
+    width:30%;
+  }
+}
+
+.flex-item:nth-child(1){
+    order: 1;
+    
+}
+.flex-item:nth-child(2){
+    order: 2;
+}
+.flex-item:nth-child(3){
+    @include tablet{
+        order: 4;
+        gap: 2rem;
+    }
+        
+}
+.flex-item:nth-child(4){
+    @include tablet{
+        order: 4;
+
+    }
+}
+.flex-item:nth-child(5){
+    @include tablet{
+        order: 5;
+    }
+}
+.flex-item:nth-child(6){
+    @include tablet{
+        order: 3;
+        text-align: right;
+    }
+}
+.flex-item:nth-child(7){
+    order: 7;
+    @include tablet{
+        width: 60%;
+    }
+}
+
 
 .footer__title{
     color: white;
+    padding-top: 1.5rem;
+    padding-bottom:1rem;
 }
 
 .footer__icons{
     display: flex;
-    gap:2rem;
-
+    gap: 2rem;
+    width: 10rem;
 }
 
 .footer__contact{
@@ -29,6 +90,8 @@
 }
 
 .footer__logo{
+    padding-top: 1.5rem;
+    padding-bottom:1rem;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight:700;
