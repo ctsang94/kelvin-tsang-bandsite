@@ -301,11 +301,28 @@ body {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__title {
+    font-size: 3.75rem;
+    font-weight: 500;
+  }
+}
 
 .footer__icons {
   display: flex;
   gap: 2rem;
   width: 10rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__icons {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__icon {
+    width: 3.125rem;
+  }
 }
 
 .footer__contact {

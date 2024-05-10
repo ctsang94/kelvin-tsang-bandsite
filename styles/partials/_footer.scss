@@ -69,12 +69,25 @@
     color: white;
     padding-top: 1.5rem;
     padding-bottom:1rem;
+    @include tablet{
+        font-size: 3.75rem;
+        font-weight:500;
+    }
 }
 
 .footer__icons{
     display: flex;
     gap: 2rem;
     width: 10rem;
+    @include tablet{
+        justify-content: flex-start;
+    }
+}
+
+.footer__icon{
+    @include tablet{
+        width:3.125rem;
+    }
 }
 
 .footer__contact{
