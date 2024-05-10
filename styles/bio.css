@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "AvenirNextLTPro";
+  font-weight: 400;
 }
 
 *,
@@ -229,9 +230,7 @@ body {
 
 .footer {
   background-color: #323232;
-  font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
   text-transform: capitalize;
   font-family: "AvenirNextLTPro";
 }
@@ -244,6 +243,8 @@ body {
     align-items: baseline;
     gap: 2rem;
     width: 100%;
+    font-family: "AvenirNextLTPro";
+    font-weight: 500;
   }
 }
 
@@ -303,8 +304,8 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .footer__title {
-    font-size: 3.75rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 600;
   }
 }
 
@@ -315,36 +316,47 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .footer__icons {
+    display: flex;
     justify-content: flex-start;
+    align-items: center;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .footer__icon {
     width: 3.125rem;
+    height: 3.125rem;
   }
 }
 
 .footer__contact {
   color: white;
+  font-weight: 600;
 }
 
 .footer__address {
   color: #FAFAFA;
+  font-weight: 500;
 }
 
 .footer__email {
   color: #FAFAFA;
+  font-weight: 500;
+  text-transform: none;
 }
 
 .footer__logo {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
-  font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
   color: white;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__logo {
+    font-family: "AvenirNextLTPro";
+    font-weight: 500;
+  }
 }
 
 .footer__copyright {

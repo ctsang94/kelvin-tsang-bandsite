@@ -3,11 +3,10 @@
 
 .footer{
     background-color: #323232;
-    font-size: 1.5rem;
     line-height: 2rem;
-    font-weight:700;
     text-transform: capitalize;
     font-family: 'AvenirNextLTPro';
+
     
     @include tablet{
         display: flex;
@@ -17,6 +16,8 @@
         align-items: baseline;
         gap: 2rem;
         width: 100%;
+        font-family: 'AvenirNextLTPro';
+        font-weight: 500;
     }
 }
 
@@ -70,8 +71,8 @@
     padding-top: 1.5rem;
     padding-bottom:1rem;
     @include tablet{
-        font-size: 3.75rem;
-        font-weight:500;
+        font-size: 3rem;
+        font-weight:600;
     }
 }
 
@@ -80,36 +81,48 @@
     gap: 2rem;
     width: 10rem;
     @include tablet{
+        display: flex;
         justify-content: flex-start;
+        align-items: center;
+      
     }
 }
 
 .footer__icon{
     @include tablet{
         width:3.125rem;
+        height: 3.125rem;
+    
     }
 }
 
 .footer__contact{
     color:white;
+    font-weight: 600;
+    
 }
 
 .footer__address{
     color:#FAFAFA;
+    font-weight: 500;
 }
 
 .footer__email{
-    color: #FAFAFA
+    color: #FAFAFA;
+    font-weight: 500;
+    text-transform: none;
 }
 
 .footer__logo{
     padding-top: 1.5rem;
     padding-bottom:1rem;
-    font-size: 1.5rem;
     line-height: 2rem;
-    font-weight:700;
     color: white;
     text-transform: uppercase;
+    @include tablet{
+        font-family: 'AvenirNextLTPro';
+        font-weight: 500;
+    }
 }
 
 .footer__copyright{
