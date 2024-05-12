@@ -21,12 +21,14 @@
                 justify-content:space-between;
                 align-items: center;
                 gap: 2rem;
+                width:50%;
             }
             @include desktop{
                 display: flex;
                 justify-content:flex-start;
                 align-items: center;
                 gap: 3rem;
+                width: 50%;
             }
             .footer__title{
                 font-size: 2rem;
@@ -55,6 +57,9 @@
             justify-content: flex-end;
             padding-right: 2rem;
             @include tablet{
+                width: 50%;
+            }
+            @include desktop{
                 width: 50%;
             }
             .hide{

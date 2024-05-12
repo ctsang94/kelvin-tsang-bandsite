@@ -393,6 +393,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -401,6 +402,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 3rem;
+    width: 50%;
   }
 }
 .footer .flex__container--top .flex__container--top-left .footer__title {
@@ -434,6 +436,11 @@ body {
   padding-right: 2rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer .flex__container--top .flex__container--top-right {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
   .footer .flex__container--top .flex__container--top-right {
     width: 50%;
   }
