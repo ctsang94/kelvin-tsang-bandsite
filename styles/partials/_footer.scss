@@ -8,6 +8,9 @@
     @include tablet{
         padding: 1rem 2rem;
     }
+    @include desktop{
+        padding: 0 6rem;
+    }
     
     .flex__container--top{
         display: flex;
@@ -20,6 +23,12 @@
                 justify-content:space-between;
                 align-items: center;
                 gap: 2rem;
+            }
+            @include desktop{
+                display: flex;
+                justify-content:flex-start;
+                align-items: center;
+                gap: 3rem;
             }
             .footer__title{
                 font-size: 2rem;
@@ -60,14 +69,24 @@
             display: flex;
             justify-content: start;
             align-items: start;
-            gap: 10rem;
+            gap: 5rem;
             width: 100%;
+        }
 
+        @include desktop{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            gap: 5rem;
+            width: 100%;
         }
         .flex__item{
             font-size: .8125rem;
             line-height: 1.125rem;
             font-weight: 400;
+            @include tablet{
+                width: 30%; 
+            }
             @include tablet{
                 width: 30%; 
             }
@@ -103,11 +122,16 @@
         @include tablet{
             padding-left: 2rem;
         }
+        @include desktop{
+            padding-bottom: 2rem;
+        }
         .hide{
             @include tablet{
                 display: none;
             }
-            
+            @include desktop{
+                display: none;
+            }   
         }
     }
 }
