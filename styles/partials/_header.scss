@@ -1,79 +1,81 @@
 @use "./mixins" as *;
 @use "./font" as *;
 
-.header{
-    display: flex;
-    flex-direction: column;
-    background-color: #323232;
-    font-size: 1.25rem;
-    line-height: 2rem;
-    font-weight:700;
-    color: white;
-    font-family: 'AvenirNextLTPro';
-    // height: 1.25rem;
-    // width: 7.5rem;
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  font-family: "AvenirNextLTPro";
+  // height: 1.25rem;
+  // width: 7.5rem;
 
-    @include tablet{
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 4rem;
-    }
+  @include tablet {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+  }
 
-    @include desktop{
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 4rem;
-    }
-}
-.header__logo{
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__logo {
     width: 7.5rem;
     height: 1.25rem;
     margin: 1rem;
-}
-.header__title{
+    @include desktop {
+      padding-left: 2rem;
+    }
+  }
+
+  &__title {
     display: flex;
     justify-content: center;
-    @include tablet{
-        padding-left: 3rem;
+    @include tablet {
+      padding-left: 3rem;
     }
-    @include desktop{
-        padding-left: 3rem;
+    @include desktop {
+      padding-left: 3rem;
     }
-}
+  }
 
-.navbar__list{
-    display:flex;
+  .navbar__list {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-
-    @include tablet{
-        gap: 3rem;
-        font-size: 1rem;
-        padding-top: 1rem;
+    @include tablet {
+      gap: 3rem;
+      font-size: 1rem;
+      padding-top: 1rem;
     }
-    @include desktop{
-        gap: 3rem;
-    }
-}
-
-.navbar__item{
-    width:50%;
-    text-align: center;
-    text-transform: capitalize;
-    color: #AFAFAF;
-    padding-bottom: 1rem;
-    font-weight: 400;
-    
-    @mixin tablet{
-        padding-top: 1rem;
+    @include desktop {
+      gap: 3rem;
+      font-size: 1rem;
+      padding-top: 1rem;
     }
 
-}
-
-.active{
-    border-bottom: 4px solid white;
-    color: white;
+    &--item {
+      width: 50%;
+      text-align: center;
+      text-transform: capitalize;
+      color: #afafaf;
+      padding-bottom: 1rem;
+      font-weight: 400;
+      @include desktop {
+        font-size: 0.75rem;
+      }
+    }
+    .active {
+      border-bottom: 0.25rem solid white;
+      color: white;
+      @include desktop {
+        border-bottom: 0.125rem solid white;
+      }
+    }
+  }
 }

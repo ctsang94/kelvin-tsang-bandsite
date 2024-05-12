@@ -37,10 +37,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #323232;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  font-weight: 700;
-  color: white;
   font-family: "AvenirNextLTPro";
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -59,13 +55,16 @@ body {
     gap: 4rem;
   }
 }
-
 .header__logo {
   width: 7.5rem;
   height: 1.25rem;
   margin: 1rem;
 }
-
+@media screen and (min-width: 1280px) {
+  .header__logo {
+    padding-left: 2rem;
+  }
+}
 .header__title {
   display: flex;
   justify-content: center;
@@ -80,38 +79,47 @@ body {
     padding-left: 3rem;
   }
 }
-
-.navbar__list {
+.header .navbar__list {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
-  .navbar__list {
+  .header .navbar__list {
     gap: 3rem;
     font-size: 1rem;
     padding-top: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .navbar__list {
+  .header .navbar__list {
     gap: 3rem;
+    font-size: 1rem;
+    padding-top: 1rem;
   }
 }
-
-.navbar__item {
+.header .navbar__list--item {
   width: 50%;
   text-align: center;
   text-transform: capitalize;
-  color: #AFAFAF;
+  color: #afafaf;
   padding-bottom: 1rem;
   font-weight: 400;
 }
-
-.active {
-  border-bottom: 4px solid white;
+@media screen and (min-width: 1280px) {
+  .header .navbar__list--item {
+    font-size: 0.75rem;
+  }
+}
+.header .navbar__list .active {
+  border-bottom: 0.25rem solid white;
   color: white;
+}
+@media screen and (min-width: 1280px) {
+  .header .navbar__list .active {
+    border-bottom: 0.125rem solid white;
+  }
 }
 
 .hero {
