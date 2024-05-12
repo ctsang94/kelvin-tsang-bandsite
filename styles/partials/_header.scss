@@ -27,6 +27,9 @@
     width: 7.5rem;
     height: 1.25rem;
     margin: 1rem;
+    @include tablet{
+      margin: 0rem;
+    }
     @include desktop {
       padding-left: 2rem;
     }
