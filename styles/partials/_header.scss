@@ -61,7 +61,10 @@
       font-size: 1rem;
       padding-top: 1rem;
     }
-
+    a{
+      text-decoration: none;
+      color: white;
+    }
     &--item {
       width: 50%;
       text-align: center;
@@ -69,6 +72,11 @@
       color: #afafaf;
       padding-bottom: 1rem;
       font-weight: 400;
+      &:hover{
+        border-bottom: 0.25rem solid white;
+        color: white;
+      }
+
       @include desktop {
         font-size: 0.75rem;
       }

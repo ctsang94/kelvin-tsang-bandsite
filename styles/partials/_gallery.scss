@@ -2,6 +2,7 @@
 @use "./font" as *;
 
 .gallery{
+    background-color: #E1E1E1;
     @include tablet{
         padding: 0 2rem;
     }
@@ -18,6 +19,7 @@
             font-size: 2.25rem;
         }
         @include desktop{
+            padding-top: 1rem;
             padding-left: 1rem;
         }
     }
