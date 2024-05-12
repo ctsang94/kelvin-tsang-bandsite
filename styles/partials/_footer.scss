@@ -2,129 +2,113 @@
 @use "./font" as *;
 
 .footer{
-    background-color: #323232;
-    line-height: 2rem;
-    text-transform: capitalize;
-    font-family: 'AvenirNextLTPro';
-
-    
-    @include tablet{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 2rem;
-        width: 100%;
-        font-family: 'AvenirNextLTPro';
-        font-weight: 500;
-    }
-}
-
-.flex-item{
-  @include tablet{
-    width:30%;
-  }
-}
-
-.flex-item:nth-child(1){
-    order: 1;
-    
-}
-.flex-item:nth-child(2){
-    order: 2;
-}
-.flex-item:nth-child(3){
-    @include tablet{
-        order: 4;
-        gap: 2rem;
-    }
-        
-}
-.flex-item:nth-child(4){
-    @include tablet{
-        order: 4;
-
-    }
-}
-.flex-item:nth-child(5){
-    @include tablet{
-        order: 5;
-    }
-}
-.flex-item:nth-child(6){
-    @include tablet{
-        order: 3;
-        text-align: right;
-    }
-}
-.flex-item:nth-child(7){
-    order: 7;
-    @include tablet{
-        width: 60%;
-    }
-}
-
-
-.footer__title{
+    background-color: #323232; 
     color: white;
-    padding-top: 1.5rem;
-    padding-bottom:1rem;
+    padding: 1rem;
     @include tablet{
-        font-size: 3rem;
-        font-weight:600;
+        padding: 1rem 2rem;
     }
-}
-
-.footer__icons{
-    display: flex;
-    gap: 2rem;
-    width: 10rem;
-    @include tablet{
+    
+    .flex__container--top{
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-      
+        .flex__container--top-left{
+            width: 50%;
+            @include tablet{
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                gap: 2rem;
+            }
+            .footer__title{
+                font-size: 2rem;
+                @include tablet{
+                    font-size: 2.25rem;
+                    font-weight: 500;
+                    padding-left: 2rem;
+                }
+            }
+            .footer__icons{
+                display: flex;
+                justify-content: flex-start;
+                gap: 2rem;
+                .footer__icon{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+                @include tablet{
+                    padding-right: 1rem;
+                }
+            }
+        }
+        .flex__container--top-right{
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 2rem;
+            .hide{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .flex__container--middle{
+        @include tablet{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            gap: 10rem;
+            width: 100%;
+
+        }
+        .flex__item{
+            font-size: .8125rem;
+            line-height: 1.125rem;
+            font-weight: 400;
+            @include tablet{
+                width: 30%; 
+            }
+        }
+
+        .flex-item-first{
+            @include tablet{
+                padding-left: 2rem;
+            }
+        }
+        .flex-item-second{
+            @include tablet{
+                padding-right: 2rem;
+            }
+        }
+
+        .footer__contact{
+            font-weight: 600;
+        }
+        .footer__address{
+            font-weight: 400;
+        }
+        .footer__email{
+            font-weight: 400;
+        }
+        .footer__copyright{
+            font-weight: 400;
+        }
+    }
+
+
+    .flex__container--bottom{
+        @include tablet{
+            padding-left: 2rem;
+        }
+        .hide{
+            @include tablet{
+                display: none;
+            }
+            
+        }
     }
 }
 
-.footer__icon{
-    @include tablet{
-        width:3.125rem;
-        height: 3.125rem;
-    
-    }
-}
-
-.footer__contact{
-    color:white;
-    font-weight: 600;
-    
-}
-
-.footer__address{
-    color:#FAFAFA;
-    font-weight: 500;
-}
-
-.footer__email{
-    color: #FAFAFA;
-    font-weight: 500;
-    text-transform: none;
-}
-
-.footer__logo{
-    padding-top: 1.5rem;
-    padding-bottom:1rem;
-    line-height: 2rem;
-    color: white;
-    text-transform: uppercase;
-    @include tablet{
-        font-family: 'AvenirNextLTPro';
-        font-weight: 500;
-    }
-}
-
-.footer__copyright{
-    color:#FAFAFA;
-}
