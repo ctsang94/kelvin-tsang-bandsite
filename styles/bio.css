@@ -311,6 +311,7 @@ body {
   }
 }
 .gallery__title {
+  padding-top: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;

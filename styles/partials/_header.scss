@@ -1,10 +1,11 @@
 @use "./mixins" as *;
 @use "./font" as *;
+@use "./variables" as *;
 
 .header {
   display: flex;
   flex-direction: column;
-  background-color: #323232;
+  background-color: $primary-background-color;
   font-family: "AvenirNextLTPro";
   // height: 1.25rem;
   // width: 7.5rem;
@@ -39,10 +40,10 @@
     display: flex;
     justify-content: center;
     @include tablet {
-      padding-left: 3rem;
+      padding-left: $tablet-padding-left;
     }
     @include desktop {
-      padding-left: 3rem;
+      padding-left: $desktop-padding-left;
     }
   }
 
@@ -53,13 +54,13 @@
     margin: 0;
     @include tablet {
       gap: 3rem;
-      font-size: 1rem;
-      padding-top: 1rem;
+      font-size: $tablet-fontsize;
+      padding-top: $tablet-padding-top;
     }
     @include desktop {
       gap: 3rem;
-      font-size: 1rem;
-      padding-top: 1rem;
+      font-size: $desktop-fontsize;
+      padding-top: $desktop-padding-top;
     }
     a{
       text-decoration: none;

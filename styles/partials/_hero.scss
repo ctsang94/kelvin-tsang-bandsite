@@ -1,5 +1,5 @@
 @use "./mixins" as *;
-
+@use "./variables" as *;
 .hero{
     background-image: url(../../assets/images/hero-bio.jpg);
     background-position:center;
@@ -21,11 +21,11 @@
         font-weight: 500;
         @include tablet{
             padding: 0 2rem;
-            font-size:2.25rem;
+            font-size:$tablet-header-fontsize;
         }
         @include desktop{
             padding-left: 6rem;
-            font-size: 3.75rem;
+            font-size: $desktop-header-fontsize;
         }
     }
     .overlay{

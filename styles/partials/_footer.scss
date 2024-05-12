@@ -1,8 +1,9 @@
 @use "./mixins" as *;
 @use "./font" as *;
+@use "./variables" as *;
 
 .footer{
-    background-color: #323232; 
+    background-color: $primary-background-color;
     color: white;
     padding: 1rem;
     @include tablet{
@@ -34,7 +35,7 @@
                 font-size: 2rem;
                 font-weight: 500;
                 @include tablet{
-                    font-size: 2.25rem;
+                    font-size: $tablet-header-fontsize;
                     font-weight: 500;
                     padding-left: 2rem;
                 }

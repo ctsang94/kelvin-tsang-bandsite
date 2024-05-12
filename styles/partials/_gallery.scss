@@ -1,5 +1,6 @@
 @use "./mixins" as *;
 @use "./font" as *;
+@use "./variables" as *;
 
 .gallery{
     background-color: #E1E1E1;
@@ -10,13 +11,14 @@
         padding: 0 6rem;
     }
     &__title{
-        font-size: 1.5rem;
+        padding-top: 1rem;
+        font-size: $mobile-font-size;
         line-height: 2rem;
         font-weight: 600;
         text-transform: capitalize;
         @include tablet{
             padding-left: 2rem;
-            font-size: 2.25rem;
+            font-size: $tablet-header-fontsize;
         }
         @include desktop{
             padding-top: 1rem;

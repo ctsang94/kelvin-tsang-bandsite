@@ -1,5 +1,6 @@
 @use "./mixins" as *;
 @use "./font" as *;
+@use "./variables" as *;
 
 .section{
     @include tablet{
@@ -9,11 +10,11 @@
         padding: 0 6rem;
     }
     &__title{
-        font-size: 1.5rem;
+        font-size: $mobile-font-size;
         line-height: 2rem;
         font-weight: 600;
         @include tablet{
-            font-size: 2.25rem;
+            font-size: $tablet-header-fontsize;
         }
     }
     &__img{
