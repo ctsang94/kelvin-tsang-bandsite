@@ -1,6 +1,24 @@
-//Create array of object to hold comments
 const form = document.getElementById('commentForm');
-const comments = [{name: 'Ruth', comment: 'I dont get it', date: '5/12/2024', date2:'5/12/2024'}];
+const comments = [
+    {
+        name: 'Ruth',
+        comment: 'I dont get it',
+        date: '5/12/2024',
+        date2: '5/12/2024'
+    },
+    {
+        name: 'John',
+        comment: 'I love Javascript!!!!',
+        date: '5/02/2024',
+        date2: '5/02/2024'
+    },
+    {
+        name: 'Tim',
+        comment: 'Not me, I hate JAVASCRIPT!!!!!',
+        date: '5/03/2024',
+        date2: '5/03/2024'
+    }
+];
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -14,11 +32,11 @@ form.addEventListener('submit', (e) => {
     displayComments(comments);
 });
 
-function displayComments(comments){
+function displayComments(comments) {
     const commentsContainer = document.querySelector('.comment-section');
     commentsContainer.innerHTML = '';
-    
-    comments.sort((a,b) => b.date2 - a.date2);
+
+    comments.sort((a, b) => b.date2 - a.date2);
     comments.forEach(comment => {
         const commentElement = document.createElement('span');
         const commentElement2 = document.createElement('span');
