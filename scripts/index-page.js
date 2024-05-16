@@ -20,6 +20,8 @@ const comments = [
     }
 ];
 
+displayComments(comments);
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = e.target.fullName.value;
