@@ -1,3 +1,5 @@
 
 *.css.map
 /assets/copydeck
+.DS_Store
+*.md
