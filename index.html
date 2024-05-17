@@ -78,19 +78,33 @@
             <div class="comment__container">
             <img class="user__img" src="./assets/images/Mohan-muruge.jpg">
             <form id="commentForm">
-                <label for="fullName">Name</label>
+                <label class="form__label--name" for="fullName">Name</label>
                 </br>
-                <input type="text" name="fullName" id="fullName" placeholder="Enter your name">
+                <input class="form__input--name" type="text" name="fullName" id="fullName" placeholder="Enter your name">
                 </br>
-                <label for="comment">Comment</label>
+                <label class="form__label--comment" for="comment">Comment</label>
                 </br>
-                <textarea type="text" name="comment" id="comment" placeholder="Add a new comment"></textarea>
+                <textarea class="form__input--comment" type="text" name="comment" id="comment" placeholder="Add a new comment"></textarea>
                 </br>
-                <button>COMMENT</button>
+                <button class="form__btn">COMMENT</button>
             </form>
             </div>
             <article class="comment-section">
-
+                <div class="comment-card"> 
+                    <div class="comment-cardleft">   
+                        <img class="user__img" src="./assets/images/Mohan-muruge.jpg">
+                    </div>
+                    <div class="comment-cardright">
+                        <div class="comment-name">
+                            <span>Victor Pinto</span>
+                            <span>12/02/2023</span>
+                        </div>
+                        <div class="comment-text">    
+                            <span>This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us 
+                            appreciate this for what it is and what it contains.</span>
+                        </div> 
+                    </div>    
+                </div>
             </article>
         </section>
     </main>
