@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandsite</title>
     <link rel="stylesheet" href="./styles/bio.css">
+    <script src="./scripts/index-page.js" defer></script>
 </head>
+
 <body>
 
     <header class="header">
-        <a class="header__title" href="./index.html"><img class="header__logo" src="./assets/logos/Logo-bandsite.svg"></a>
+        <a class="header__title" href="./index.html"><img class="header__logo"
+                src="./assets/logos/Logo-bandsite.svg"></a>
         <nav class="navbar">
             <ul class="navbar__list">
                 <li class="navbar__list--item active"><a href="./index.html">biography</a></li>
@@ -26,7 +30,8 @@
         <section class="section">
             <h2 class="section__title">About the Musicians</h2>
             <img class="section__img" src="./assets/images/band.jpg">
-            <p class="section__quote">“We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board’”</p>
+            <p class="section__quote">“We push each other to be the best. It’s not uncommon for one of us to say ‘this
+                needs to be better, back to the drawing board’”</p>
             <p class="section__vocalist">- Lead vocalist of The Bees Knees</p>
             <h3 class="section__subheader">the bees knees</h3>
             <div class="section__paragraphs">
@@ -70,86 +75,113 @@
                 <img class="gallery__img" src="./assets/images/Photo-gallery-7.jpg">
                 <img class="gallery__img" src="./assets/images/Photo-gallery-8.jpg">
                 <img class="gallery__img" src="./assets/images/Photo-gallery-6.jpg">
-            </div>    
+            </div>
         </section>
 
-        <section class="comment-submission">
-            <h2 class="comment-submission__title">Join the Conversation</h2>
-            <div class="comment__container">
-            <img class="user__img" src="./assets/images/Mohan-muruge.jpg">
-            <form id="commentForm">
-                <label class="form__label--name" for="fullName">Name</label>
-                </br>
-                <input class="form__input--name" type="text" name="fullName" id="fullName" placeholder="Enter your name">
-                </br>
-                <label class="form__label--comment" for="comment">Comment</label>
-                </br>
-                <textarea class="form__input--comment" type="text" name="comment" id="comment" placeholder="Add a new comment"></textarea>
-                </br>
-                <button class="form__btn">COMMENT</button>
-            </form>
-            </div>
-            <article class="comment-section">
-                <div class="comment-card"> 
-                    <div class="comment-cardleft">   
-                        <img class="user__img" src="./assets/images/Mohan-muruge.jpg">
-                    </div>
-                    <div class="comment-cardright">
-                        <div class="comment-name">
-                            <span>Victor Pinto</span>
-                            <span>12/02/2023</span>
+        <section class="comment">
+            <h2 class="comment__title">Join the Conversation</h2>
+
+            <article class="form__container">
+                <img class="user__img" src="./assets/images/Mohan-muruge.jpg">
+                <form class="commentform">
+                    <label class="form__labelname" for="fullName">Name</label>
+                    </br>
+                    <input class="form__inputname" type="text" name="fullName" id="fullName"
+                        placeholder="Enter your name">
+                    </br>
+                    <label class="form__labelcomment" for="comment">Comment</label>
+                    </br>
+                    <textarea class="form__inputcomment" type="text" name="comment" id="comment"
+                        placeholder="Add a new comment"></textarea>
+                    </br>
+                    <button class="form__btn">COMMENT</button>
+                </form>
+            </article>
+
+            <article class="reply__container">
+                <div class="reply__containerFeed">
+                    <img class="user__img" src="./assets/images/Mohan-muruge.jpg">
+                    <div class="reply__card">
+                        <ul class="reply__card--top">
+                            <li class="reply__name">Victor Pinto</li>
+                            <li class="reply__date">12/02/2023</li>
+                        </ul>
+                        <div class="reply__card--bottom">
+                            <span class="reply__text">This is art. This is inexplicable magic expressed in the purest
+                                way,
+                                everything that
+                                makes up this majestic work deserves reverence. Let us
+                                appreciate this for what it is and what it contains.</span>
                         </div>
-                        <div class="comment-text">    
-                            <span>This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us 
-                            appreciate this for what it is and what it contains.</span>
-                        </div> 
-                    </div>    
+                    </div>
+                </div>
+                <div class="reply__containerFeed">
+                    <img class="user__img" src="./assets/images/Mohan-muruge.jpg">
+                    <div class="reply__card">
+                        <ul class="reply__card--top">
+                            <li class="reply__name">Victor Pinto</li>
+                            <li class="reply__date">12/02/2023</li>
+                        </ul>
+                        <div class="reply__card--bottom">
+                            <span class="reply__text">This is art. This is inexplicable magic expressed in the purest
+                                way,
+                                everything that
+                                makes up this majestic work deserves reverence. Let us
+                                appreciate this for what it is and what it contains.</span>
+                        </div>
+                    </div>
                 </div>
             </article>
+
         </section>
     </main>
 
-        <footer class="footer flex__container">
-            <div class="flex__container--top">
-                <div class="flex__container--top-left">
-                    <h2 class="footer__title">Get in Touch</h2>
-                    <div class="footer__icons">
-                        <a href="https://www.instagram.com"><img class="footer__icon" src="./assets/icons/Icon-instagram.svg"></a>
-                        <a href="https://www.facebook.com"><img class="footer__icon" src="./assets/icons/Icon-facebook.svg"></a>
-                        <a href="https://www.twitter.com"><img class="footer__icon" src="./assets/icons/Icon-twitter.svg"></a>
-                    </div>
-                </div>
-                <div class="flex__container--top-right">
-                    <a class="header__title header__logo hide" href="#"><img src="./assets/logos/Logo-bandsite.svg"></a>
+    <footer class="footer flex__container">
+        <div class="flex__container--top">
+            <div class="flex__container--top-left">
+                <h2 class="footer__title">Get in Touch</h2>
+                <div class="footer__icons">
+                    <a href="https://www.instagram.com"><img class="footer__icon"
+                            src="./assets/icons/Icon-instagram.svg"></a>
+                    <a href="https://www.facebook.com"><img class="footer__icon"
+                            src="./assets/icons/Icon-facebook.svg"></a>
+                    <a href="https://www.twitter.com"><img class="footer__icon"
+                            src="./assets/icons/Icon-twitter.svg"></a>
                 </div>
             </div>
+            <div class="flex__container--top-right">
+                <a class="header__title header__logo hide" href="#"><img src="./assets/logos/Logo-bandsite.svg"></a>
+            </div>
+        </div>
 
-            <div class="flex__container--middle">
-                <div class="flex-item-first">
-                    <h3 class="footer__contact">The Bees Knees Management</h>
+        <div class="flex__container--middle">
+            <div class="flex-item-first">
+                <h3 class="footer__contact">The Bees Knees Management</h>
                     <p class="footer__address">503 Broadway Penthouse,</br> New York, NY 10012, USA</p>
                     <span class="footer__email"><a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></span>
-                </div>    
-                <div class="flex-item-second">    
-                    <h3 class="footer__contact">Limitless Artist Group</h3>
-                    <p class="footer__address">Booking Agent for</br> US / South America / Japan</p>
-                    <span class="footer__email"><a href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a></span>
-                </div>
-                <div class="flex-item">
-                    <h3 class="footer__contact">ARCH Entertainment</h3>
-                    <p class="footer__address">Booking Agent for</br> UK / EU / AU</p>
-                    <span class="footer__email"><a href="mailto:bookings@limitlessag.com">bookings@archentertainment.com</a></span>
-                </div>     
             </div>
-
-            <div class="flex__container--bottom">    
-                <a class="footer__title hide" href="#"><img class="footer__logo" src="./assets/logos/Logo-bandsite.svg"></a>
-                <div class="flex-item">      
-                    <p class="footer__copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>
-                </div>    
+            <div class="flex-item-second">
+                <h3 class="footer__contact">Limitless Artist Group</h3>
+                <p class="footer__address">Booking Agent for</br> US / South America / Japan</p>
+                <span class="footer__email"><a
+                        href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a></span>
             </div>
+            <div class="flex-item">
+                <h3 class="footer__contact">ARCH Entertainment</h3>
+                <p class="footer__address">Booking Agent for</br> UK / EU / AU</p>
+                <span class="footer__email"><a
+                        href="mailto:bookings@limitlessag.com">bookings@archentertainment.com</a></span>
+            </div>
+        </div>
 
-        </footer>
-    <script src="./scripts/index-page.js"></script>
+        <div class="flex__container--bottom">
+            <a class="footer__title hide" href="#"><img class="footer__logo" src="./assets/logos/Logo-bandsite.svg"></a>
+            <div class="flex-item">
+                <p class="footer__copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

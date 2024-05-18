@@ -1,4 +1,4 @@
-const form = document.getElementById('commentForm');
+const form = document.querySelector('.commentform');
 const comments = [
     {
         name: 'Tiesto',
@@ -8,17 +8,19 @@ const comments = [
     },
     {
         name: 'John',
-        comment: 'I love Javascript!!!!',
+        comment: "This is art. This is inexplicable magic expressed in the purest way,everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
         date: '5/02/2024',
         date2: new Date()
     },
     {
         name: 'Tim',
-        comment: 'Not me, I hate JAVASCRIPT!!!!!',
+        comment: "This is art. This is inexplicable magic expressed in the purest way,everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
         date: '5/03/2024',
         date2: new Date()
     }
 ];
+
+displayComments(comments);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -35,18 +37,34 @@ form.addEventListener('submit', (e) => {
 });
 
 function displayComments(comments) {
-    const commentsContainer = document.querySelector('.comment-section');
-    commentsContainer.innerHTML = '';
+    const replyContainer= document.querySelector('.reply__container');
+    replyContainer.innerHTML = '';
     comments.forEach(comment => {
-        const commentElement = document.createElement('span');
-        const commentElement2 = document.createElement('span');
-        const commentElement3 = document.createElement('p');
-        commentElement.innerText = comment.name;
-        commentElement2.innerText = comment.date;
-        commentElement3.innerText = comment.comment;
-        commentsContainer.appendChild(commentElement);
-        commentsContainer.appendChild(commentElement2)
-        commentsContainer.appendChild(commentElement3);
+        const divContainer = document.createElement('div');
+        divContainer.classList.add('reply__containerFeed');
+        const img = document.createElement('img');
+        img.setAttribute('src', '../assets/images/Mohan-muruge.jpg');
+        img.classList.add('user__img');
+        const div = document.createElement('div');
+        div.classList.add('reply__card');
+        const ul = document.createElement('ul');
+        ul.classList.add('reply__card--top');
+        const nameli = document.createElement('li');
+        nameli.classList.add('reply__name');
+        const dateli = document.createElement('li');
+        dateli.classList.add('reply__date');
+        const divBottom = document.createElement('div');
+        divBottom.classList.add('reply__card--bottom');
+        const textP = document.createElement('p');
+        textP.classList.add('reply__text');
+        nameli.innerText = comment.name;
+        dateli.innerText = comment.date;
+        textP.innerText = comment.comment;
+        replyContainer.append(divContainer);
+        divContainer.append(img);
+        divContainer.append(div);
+        div.append(ul, divBottom);
+        ul.append(nameli, dateli);
+        divBottom.append(textP);
     });
 }
-
