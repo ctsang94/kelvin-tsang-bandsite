@@ -26,7 +26,7 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	gap: 0.5rem;
-	border-bottom: 2px solid $mercury;
+	border-bottom: 0.125rem solid $mercury;
 
 	&:hover {
 		background-color: #fafafa;
@@ -35,7 +35,10 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
+		padding: 2rem 0;
+		&:hover {
+			background-color: #fafafa;
+		}
 	}
 }
 

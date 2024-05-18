@@ -87,14 +87,13 @@ const createEl = shows.map((e) => {
 
 });
 
-// for (let i = 1; i < createEl.length; i++){
-//     const dateLabel = document.querySelector('.show__container--dateLabel');
-//     dateLabel.classList.add('hide');
-//     const venueLabel = document.querySelector('.show__container--venueLabel');
-//     venueLabel.classList.add('hide');
-//     const locationLabel = document.querySelector('.show__container--locationLabel');
-//     locationLabel.classList.add('hide');
-// }
+const dateLabel = document.querySelector('.show__container--dateLabel');
+    dateLabel.classList.remove('hide');
+const venueLabel = document.querySelector('.show__container--venueLabel');
+    venueLabel.classList.remove('hide');
+const locationLabel = document.querySelector('.show__container--locationLabel');
+    locationLabel.classList.remove('hide');
+
 
 // const showClick = document.querySelectorAll('.show__container');
 // showClick.addEventListener('click', () => {
