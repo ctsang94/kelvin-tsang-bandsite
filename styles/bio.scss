@@ -285,7 +285,6 @@
 	margin-top: 1rem;
 	padding-top: 1rem;
 	border-top: 0.125rem solid $mercury;
-	border-top: 0.125rem solid $mercury;
 }
 
 .reply__containerFeed {
@@ -296,17 +295,23 @@
 
 .reply__card {
 	padding-left: 2rem;
-
-	&--top {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
 }
 
 .reply__card--top {
 	display: flex;
 	justify-content: space-between;
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.reply__card--items {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .reply__card--bottom {

@@ -1,31 +1,31 @@
 const shows = [
     {
-      Date: "2024-07-15",
+      Date: "Mon Sept 09 2004",
       Venue: "Concert Hall A",
       Location: "New York"
     },
     {
-      Date: "2024-08-20",
+      Date: "Sun Oct 09 2004",
       Venue: "Theater B",
       Location: "Los Angeles"
     },
     {
-      Date: "2024-09-10",
+      Date: "Wed Mya 09 2004",
       Venue: "Club C",
       Location: "London"
     },
     {
-      Date: "2024-10-05",
+      Date: "Tue Dec 09 2004",
       Venue: "Stadium D",
       Location: "Tokyo"
     },
     {
-      Date: "2024-11-12",
+      Date: "Mon May 09 2004",
       Venue: "Arena E",
       Location: "Paris"
     },
     {
-      Date: "2024-12-25",
+      Date: "Mon Jun 10 2025",
       Venue: "Amphitheater F",
       Location: "Sydney"
     }
@@ -33,20 +33,85 @@ const shows = [
 
 const createEl = shows.map((e) => {
     const showsContainer = document.querySelector('.shows__container');
-    const divElement = document.createElement('div');
+
+    const showContainer = document.createElement('div');
+    const showContainerDate = document.createElement('div');
+    const showContainerVenue = document.createElement('div');
+    const showContainerLocation = document.createElement('div');
+    
+    showContainer.classList.add('show__container');
+    showContainerDate.classList.add('show__container--date');
+    showContainerVenue.classList.add('show__container--venue');
+    showContainerLocation.classList.add('show__container--location');
+
+    const dateLabel = document.createElement('span');
+    dateLabel.classList.add('show__container--dateLabel');
+    dateLabel.classList.add('hide');
     const dateElement = document.createElement('span');
+
+    const venueLabel = document.createElement('span');
+    venueLabel.classList.add('show__container--venueLabel');
+    venueLabel.classList.add('hide');
     const venueElement = document.createElement('span');
+
+    const locationLabel = document.createElement('span');
+    locationLabel.classList.add('show__container--locationLabel');
+    locationLabel.classList.add('hide');
     const locationElement = document.createElement('span');
+
     const buttonElement = document.createElement('button');
+    buttonElement.classList.add('btn');
+    dateLabel.innerText = 'DATE';
     dateElement.innerText = e.Date;
+    venueLabel.innerText = 'VENUE';
     venueElement.innerText = e.Venue;
+    locationLabel.innerText = 'LOCATION';
     locationElement.innerText = e.Location;
     buttonElement.innerText = "BUY TICKETS";
 
-    const createdDiv = showsContainer.appendChild(divElement);
-    createdDiv.classList.add('show__container');
-    createdDiv.appendChild(dateElement).classList.add('shows__container--date');
-    createdDiv.appendChild(venueElement);
-    createdDiv.appendChild(locationElement);
-    createdDiv.appendChild(buttonElement).classList.add('btn');
+    showsContainer.appendChild(showContainer);
+
+    showContainer.appendChild(showContainerDate);
+    showContainerDate.appendChild(dateLabel);
+    showContainerDate.appendChild(dateElement);
+
+    showContainer.appendChild(showContainerVenue);
+    showContainerVenue.appendChild(venueLabel);
+    showContainerVenue.appendChild(venueElement);
+
+    showContainer.appendChild(showContainerLocation);
+    showContainerLocation.appendChild(locationLabel);
+    showContainerLocation.appendChild(locationElement);
+
+    showContainer.appendChild(buttonElement);
+
+});
+
+// for (let i = 1; i < createEl.length; i++){
+//     const dateLabel = document.querySelector('.show__container--dateLabel');
+//     dateLabel.classList.add('hide');
+//     const venueLabel = document.querySelector('.show__container--venueLabel');
+//     venueLabel.classList.add('hide');
+//     const locationLabel = document.querySelector('.show__container--locationLabel');
+//     locationLabel.classList.add('hide');
+// }
+
+// const showClick = document.querySelectorAll('.show__container');
+// showClick.addEventListener('click', () => {
+//     showClick.classList.add('selected');
+// });
+
+// showClick();
+
+function handleItemClick(event) {
+  const shows = document.querySelectorAll('.show__container');
+  console.log(shows);
+  shows.forEach(item => item.classList.remove('hover'));
+  shows.forEach(item => item.classList.remove('selected'));
+  event.currentTarget.classList.add('selected');
+}
+
+const items = document.querySelectorAll('.show__container');
+items.forEach(show => {
+  show.addEventListener('click', handleItemClick);
 });
