@@ -3,3 +3,4 @@
 /assets/copydeck
 .DS_Store
 *.md
+.vscode/extensions.json
