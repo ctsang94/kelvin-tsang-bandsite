@@ -6,8 +6,8 @@
 }
 
 .showTitle {
-	font-size: 3rem;
-	font-weight: 600;
+	font-size: 2rem;
+	font-weight: 700;
 }
 
 .shows__container {
@@ -27,6 +27,7 @@
 	justify-content: space-evenly;
 	gap: 0.5rem;
 	border-bottom: 0.125rem solid $mercury;
+	padding: 1rem 0;
 
 	&:hover {
 		background-color: #fafafa;
@@ -40,47 +41,59 @@
 			background-color: #fafafa;
 		}
 	}
+
+	&--date {
+		display: flex;
+		flex-direction: column;
+		font-weight: 600;
+		font-size: $mobile-font-size;
+		.show__container--dateLabel {
+			font-weight: 500;
+			font-size: 1.25rem;
+			color: $silver;
+			padding: 1rem 0;
+			text-transform: capitalize;
+		}
+	}
+	&--venue {
+		display: flex;
+		flex-direction: column;
+		font-size: $mobile-font-size;
+		.show__container--venueLabel {
+			font-weight: 500;
+			font-size: 1.25rem;
+			color: $silver;
+			padding: 1rem 0;
+			text-transform: capitalize;
+		}
+	}
+	&--location {
+		display: flex;
+		flex-direction: column;
+		font-size: $mobile-font-size;
+		padding-bottom: 1rem;
+		.show__container--locationLabel {
+			font-weight: 500;
+			font-size: 1.25rem;
+			color: $silver;
+			padding: 1rem 0;
+			text-transform: capitalize;
+		}
+	}
+	
 }
 
 .selected {
 	background-color: $mercury;
 }
 
-.show__container--date {
-	display: flex;
-	flex-direction: column;
-	font-weight: 600;
-	font-size: $mobile-font-size;
-	.show__container--dateLabel {
-		font-weight: 400;
-		color: $silver;
-		padding: 1rem 0;
-	}
-}
-.show__container--venue {
-	display: flex;
-	flex-direction: column;
-	font-size: $mobile-font-size;
-	.show__container--venueLabel {
-		color: $silver;
-		padding: 1rem 0;
-	}
-}
-.show__container--location {
-	display: flex;
-	flex-direction: column;
-	font-size: $mobile-font-size;
-	.show__container--locationLabel {
-		color: $silver;
-		padding: 1rem 0;
-	}
-}
+
 
 .btn {
 	width: 100%;
 	height: 4rem;
-	background-color: #000000;
-	border-radius: 10px;
+	background-color:  #323232;
+	border-radius: .3125rem;
 	color: white;
 	font-size: $mobile-font-size;
 	@include tablet {

@@ -54,26 +54,28 @@
 	background-size: cover;
 	width: 100%;
 	background-color: #323232;
-	height: 40vh;
+	height: 55vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	@include desktop {
-		height: 50vh;
+		height: 60vh;
 	}
 	&__subtitle {
 		color: white;
+		padding-top: 1rem;
+		padding-left: 1rem;
+		font-weight: 500;
 	}
 	&__title {
 		display: flex;
 		justify-content: flex-start;
-		align-items: center;
+		flex-wrap: wrap;
 		color: white;
 		padding-left: 1rem;
-		text-transform: capitalize;
-		font-size: 1.5rem;
-		font-weight: 500;
+		font-size: 2rem;
+		font-weight: 600;
 		@include tablet {
 			padding: 0 2rem;
 			font-size: $tablet-header-fontsize;
@@ -82,11 +84,15 @@
 			padding-left: 6rem;
 			font-size: $desktop-header-fontsize;
 		}
+	&__iframe{
+		
+		padding-left: 1rem;
+	}	
 	}
 	.overlay {
 		background-color: rgba(50, 50, 50, 0.5);
 
-		@include desktop {
+		@include tablet{
 			width: 100%;
 			height: 50vh;
 			background-color: rgba(50, 50, 50, 0.5);
@@ -304,6 +310,11 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	@include tablet{
+		display: flex;
+		justify-content: space-between;
+	}
+
 }
 .reply__card--items {
 	width: 100%;
@@ -312,6 +323,10 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	@include tablet{
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .reply__card--bottom {

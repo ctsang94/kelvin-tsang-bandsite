@@ -20,7 +20,6 @@ const comments = [
     }
 ];
 displayComments(comments);
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = e.target.fullName.value;
@@ -37,7 +36,7 @@ form.addEventListener('submit', (e) => {
 function displayComments(comments) {
     const replyContainer= document.querySelector('.reply__container');
     replyContainer.innerHTML = '';
-    comments.map(comment => {
+    comments.forEach(comment => {
         const divContainer = document.createElement('div');
         divContainer.classList.add('reply__containerFeed');
 
@@ -52,6 +51,7 @@ function displayComments(comments) {
         divTop.classList.add('reply__card--top');
         const ul = document.createElement('ul');
         ul.classList.add('reply__card--items');
+
         const nameli = document.createElement('li');
         nameli.classList.add('reply__name');
         const dateli = document.createElement('li');
@@ -76,3 +76,5 @@ function displayComments(comments) {
         divBottom.appendChild(textP);
     });
 }
+
+console.log(comments);
