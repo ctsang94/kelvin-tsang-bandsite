@@ -59,6 +59,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
+
+	@include tablet{
+		height: 70vh;
+	}
 	@include desktop {
 		height: 60vh;
 	}
@@ -67,6 +71,11 @@
 		padding-top: 1rem;
 		padding-left: 1rem;
 		font-weight: 500;
+		@include tablet {
+			padding-left: 3rem;
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
 	}
 	&__title {
 		display: flex;
@@ -77,18 +86,26 @@
 		font-size: 2rem;
 		font-weight: 600;
 		@include tablet {
-			padding: 0 2rem;
-			font-size: $tablet-header-fontsize;
+			padding: 0 3rem;
+			font-size: 3.5rem;
+			margin: 0;
+			
 		}
 		@include desktop {
 			padding-left: 6rem;
 			font-size: $desktop-header-fontsize;
-		}
-	&__iframe{
-		
-		padding-left: 1rem;
-	}	
+		}	
 	}
+
+	.responsiveiframe{
+		padding: 0 1rem;
+		@include tablet{
+			padding-top: 3rem;
+			padding-left: 3rem;
+			width: 60%;
+		}
+	}
+	
 	.overlay {
 		background-color: rgba(50, 50, 50, 0.5);
 
@@ -99,6 +116,7 @@
 			margin: 0;
 		}
 	}
+	
 }
 
 .section {

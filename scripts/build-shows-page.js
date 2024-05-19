@@ -95,13 +95,6 @@ const locationLabel = document.querySelector('.show__container--locationLabel');
     locationLabel.classList.remove('hide');
 
 
-// const showClick = document.querySelectorAll('.show__container');
-// showClick.addEventListener('click', () => {
-//     showClick.classList.add('selected');
-// });
-
-// showClick();
-
 function handleItemClick(event) {
   const shows = document.querySelectorAll('.show__container');
   console.log(shows);
