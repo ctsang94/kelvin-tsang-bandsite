@@ -262,12 +262,29 @@
 	padding: 1rem;
 }
 
+.comment__title{
+	font-size: 2rem;
+	@include tablet{
+		padding: 3rem;
+		font-weight: 600;
+		font-size: 3rem;
+	}
+}
+
 .form__container {
 	display: flex;
 	margin-top: 1rem;
 	padding-top: 1rem;
 	border-top: 0.125rem solid $mercury;
-	border-top: 0.125rem solid $mercury;
+	@include tablet{
+		padding-left: 8rem;
+		padding-right: 6rem;
+		border-top: none;
+	}
+	@include desktop{
+		padding: 0 40rem;
+		border-top: none;
+	}
 }
 
 .user__img {
@@ -286,6 +303,7 @@
 	height: 2.5rem;
 	border: 0.0625rem solid $mercury;
 	border-radius: 0.25rem;
+	background-color:  #FAFAFA;
 }
 .form__inputcomment {
 	width: 100%;
@@ -293,7 +311,26 @@
 	resize: none;
 	border: 0.0625rem solid $mercury;
 	border-radius: 0.25rem;
+	background-color:  #FAFAFA;
+	@include tablet{
+		height: 8rem;
+		
+	}
+	
 }
+::placeholder{
+	padding-left: .5rem;
+	color: black;
+	font-size: 1.25rem;
+	font-weight:500;
+}
+
+input[type=text] {
+	word-wrap: break-word;
+	word-break: break-all;
+	height: 2.5rem;
+}
+
 
 .form__btn {
 	width: 100%;
@@ -301,6 +338,8 @@
 	color: white;
 	background-color: #323232;
 	border-radius: 0.5rem;
+	margin: 1rem 0;
+	
 }
 
 .reply__container {
@@ -309,16 +348,31 @@
 	margin-top: 1rem;
 	padding-top: 1rem;
 	border-top: 0.125rem solid $mercury;
+	@include tablet{
+		padding-left: 8rem;
+		padding-right: 6rem;
+		border-top: none;
+	}
+	@include desktop{
+		padding: 0 40rem;
+		border-top: none;
+	}
 }
 
 .reply__containerFeed {
+	width: 100%;
 	padding: 1rem 0;
 	display: flex;
 	flex-direction: row;
+	border-bottom: 0.125rem solid $mercury;
 }
 
 .reply__card {
+	width: 80%;
 	padding-left: 2rem;
+	@include tablet{
+		width: 100%;
+	}
 }
 
 .reply__card--top {
@@ -347,6 +401,22 @@
 	}
 }
 
+.reply__name{
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.reply__date{
+	font-size: 1.25rem;
+	color: silver;
+}
+
 .reply__card--bottom {
 	padding-top: 1rem;
+}
+
+.reply__text{
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 2rem;
 }

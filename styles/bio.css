@@ -754,12 +754,35 @@ body {
   padding: 1rem;
 }
 
+.comment__title {
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__title {
+    padding: 3rem;
+    font-weight: 600;
+    font-size: 3rem;
+  }
+}
+
 .form__container {
   display: flex;
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 0.125rem solid #e1e1e1;
-  border-top: 0.125rem solid #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .form__container {
+    padding-left: 8rem;
+    padding-right: 6rem;
+    border-top: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form__container {
+    padding: 0 40rem;
+    border-top: none;
+  }
 }
 
 .user__img {
@@ -778,6 +801,7 @@ body {
   height: 2.5rem;
   border: 0.0625rem solid #e1e1e1;
   border-radius: 0.25rem;
+  background-color: #FAFAFA;
 }
 
 .form__inputcomment {
@@ -786,6 +810,32 @@ body {
   resize: none;
   border: 0.0625rem solid #e1e1e1;
   border-radius: 0.25rem;
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .form__inputcomment {
+    height: 8rem;
+  }
+}
+
+::-moz-placeholder {
+  padding-left: 0.5rem;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+::placeholder {
+  padding-left: 0.5rem;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+input[type=text] {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 2.5rem;
 }
 
 .form__btn {
@@ -794,6 +844,7 @@ body {
   color: white;
   background-color: #323232;
   border-radius: 0.5rem;
+  margin: 1rem 0;
 }
 
 .reply__container {
@@ -803,15 +854,36 @@ body {
   padding-top: 1rem;
   border-top: 0.125rem solid #e1e1e1;
 }
+@media screen and (min-width: 768px) {
+  .reply__container {
+    padding-left: 8rem;
+    padding-right: 6rem;
+    border-top: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reply__container {
+    padding: 0 40rem;
+    border-top: none;
+  }
+}
 
 .reply__containerFeed {
+  width: 100%;
   padding: 1rem 0;
   display: flex;
   flex-direction: row;
+  border-bottom: 0.125rem solid #e1e1e1;
 }
 
 .reply__card {
+  width: 80%;
   padding-left: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .reply__card {
+    width: 100%;
+  }
 }
 
 .reply__card--top {
@@ -843,6 +915,22 @@ body {
   }
 }
 
+.reply__name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.reply__date {
+  font-size: 1.25rem;
+  color: silver;
+}
+
 .reply__card--bottom {
   padding-top: 1rem;
+}
+
+.reply__text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
 }/*# sourceMappingURL=bio.css.map */
