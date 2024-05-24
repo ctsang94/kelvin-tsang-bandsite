@@ -45,7 +45,7 @@ async function fetchAndStoreComments() {
 
 fetchAndStoreComments();
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
 	e.preventDefault();
 	const name = e.target.fullName.value;
 	const comment = e.target.comment.value;
@@ -54,7 +54,7 @@ form.addEventListener("submit", (e) => {
 		comment: comment,
 	};
 
-	myConnection.postNewComments(newComment);
+	await myConnection.postNewComments(newComment);
 
 
 	fetchAndStoreComments();

@@ -31,4 +31,3 @@ class BandSiteApi {
 }
 
 const myConnection = new BandSiteApi("8dfe898d-4c6d-4e66-85eb-cbf8650429a8");
-
