@@ -61,25 +61,27 @@ const populateShows = async () => {
 		console.log(error);
 	}
 }
+
+
 populateShows();
 
-const dateLabel = document.querySelector(".show__container--dateLabel");
-dateLabel.classList.remove("hideLabel");
-const venueLabel = document.querySelector(".show__container--venueLabel");
-venueLabel.classList.remove("hideLabel");
-const locationLabel = document.querySelector(".show__container--locationLabel");
-locationLabel.classList.remove("hideLabel");
+// const dateLabel = document.querySelector(".show__container--dateLabel");
+// dateLabel.classList.remove("hideLabel");
+// const venueLabel = document.querySelector(".show__container--venueLabel");
+// venueLabel.classList.remove("hideLabel");
+// const locationLabel = document.querySelector(".show__container--locationLabel");
+// locationLabel.classList.remove("hideLabel");
 
-
-function handleItemClick(event) {
-	const shows = document.querySelectorAll(".show__container");
-	console.log(shows);
-	shows.forEach((item) => item.classList.remove("hover"));
-	shows.forEach((item) => item.classList.remove("selected"));
-	event.currentTarget.classList.add("selected");
-}
 
 const items = document.querySelectorAll(".show__container");
 items.forEach((show) => {
 	show.addEventListener("click", handleItemClick);
 });
+
+function handleItemClick(event) {
+	const shows = document.querySelectorAll(".show__container");
+	shows.forEach((item) => item.classList.remove("hover"));
+	shows.forEach((item) => item.classList.remove("selected"));
+	event.currentTarget.classList.add("selected");
+}
+
