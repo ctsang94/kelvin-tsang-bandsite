@@ -28,6 +28,18 @@ class BandSiteApi {
 			console.log(error);
 		}
 	}
+	async fetchShows(){
+		try{
+			const response = await axios.get(
+			this.baseUrl + "showdates?api_key=" + this.apiKey);
+			return response.data;
+		}
+		catch(error){
+			console.log(error);
+		}
+	}
 }
 
 const myConnection = new BandSiteApi("8dfe898d-4c6d-4e66-85eb-cbf8650429a8");
+
+console.log(myConnection.fetchShows());

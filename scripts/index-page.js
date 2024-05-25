@@ -56,6 +56,7 @@ form.addEventListener("submit", async (e) => {
 
 	await myConnection.postNewComments(newComment);
 
+	form.reset();
 
 	fetchAndStoreComments();
 });
