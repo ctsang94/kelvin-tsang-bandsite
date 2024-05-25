@@ -1,37 +1,3 @@
-// const shows = [
-// 	{
-// 		Date: "Mon Sept 09 2004",
-// 		Venue: "Concert Hall A",
-// 		Location: "New York",
-// 	},
-// 	{
-// 		Date: "Sun Oct 09 2004",
-// 		Venue: "Theater B",
-// 		Location: "Los Angeles",
-// 	},
-// 	{
-// 		Date: "Wed Mya 09 2004",
-// 		Venue: "Club C",
-// 		Location: "London",
-// 	},
-// 	{
-// 		Date: "Tue Dec 09 2004",
-// 		Venue: "Stadium D",
-// 		Location: "Tokyo",
-// 	},
-// 	{
-// 		Date: "Mon May 09 2004",
-// 		Venue: "Arena E",
-// 		Location: "Paris",
-// 	},
-// 	{
-// 		Date: "Mon Jun 10 2025",
-// 		Venue: "Amphitheater F",
-// 		Location: "Sydney",
-// 	},
-// ];
-
-
 const populateShows = async () => {
 	try{
 		shows = await myConnection.fetchShows();
@@ -51,17 +17,17 @@ const populateShows = async () => {
 
 			const dateLabel = document.createElement("span");
 			dateLabel.classList.add("show__container--dateLabel");
-			dateLabel.classList.add("hide");
+			dateLabel.classList.add("hideLabel");
 			const dateElement = document.createElement("span");
 
 			const venueLabel = document.createElement("span");
 			venueLabel.classList.add("show__container--venueLabel");
-			venueLabel.classList.add("hide");
+			venueLabel.classList.add("hideLabel");
 			const venueElement = document.createElement("span");
 
 			const locationLabel = document.createElement("span");
 			locationLabel.classList.add("show__container--locationLabel");
-			locationLabel.classList.add("hide");
+			locationLabel.classList.add("hideLabel");
 			const locationElement = document.createElement("span");
 
 			const buttonElement = document.createElement("button");
@@ -95,14 +61,15 @@ const populateShows = async () => {
 		console.log(error);
 	}
 }
-
-// const dateLabel = document.querySelector(".show__container--dateLabel");
-// dateLabel.classList.remove("hide");
-// const venueLabel = document.querySelector(".show__container--venueLabel");
-// venueLabel.classList.remove("hide");
-// const locationLabel = document.querySelector(".show__container--locationLabel");
-// locationLabel.classList.remove("hide");
 populateShows();
+
+const dateLabel = document.querySelector(".show__container--dateLabel");
+dateLabel.classList.remove("hideLabel");
+const venueLabel = document.querySelector(".show__container--venueLabel");
+venueLabel.classList.remove("hideLabel");
+const locationLabel = document.querySelector(".show__container--locationLabel");
+locationLabel.classList.remove("hideLabel");
+
 
 function handleItemClick(event) {
 	const shows = document.querySelectorAll(".show__container");
@@ -116,4 +83,3 @@ const items = document.querySelectorAll(".show__container");
 items.forEach((show) => {
 	show.addEventListener("click", handleItemClick);
 });
-

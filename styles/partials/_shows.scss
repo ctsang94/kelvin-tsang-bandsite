@@ -1,6 +1,7 @@
 @use "./mixins" as *;
 @use "./variables" as *;
-
+@use "./footer" as *;
+ 
 .shows {
 	padding: 1rem;
 	@include tablet{
@@ -119,7 +120,7 @@
 	}
 }
 
-.hide {
+.hideLabel {
 	@include tablet {
 		display: none;
 	}
