@@ -228,10 +228,11 @@
 		width: 100%;
 	}
 	@include desktop{
-		padding: 0 40rem;
 		border-top: none;
-		width: 100%;
+		width: 50%;
 		display: flex;
+		justify-content: center;
+		margin-left:20rem;
 	}
 }
 
@@ -312,7 +313,8 @@ input[type=text] {
 		border-top: none;
 	}
 	@include desktop{
-		padding: 0 40rem;
+		margin-left:20rem;
+		width: 50%;
 		border-top: none;
 	}
 }
@@ -379,4 +381,6 @@ input[type=text] {
 	line-height: 2rem;
 	text-wrap: wrap;
 	hyphens: auto;
+	word-wrap: break-word;
+	word-break: break-all;
 }
