@@ -74,9 +74,8 @@
     .flex__container--middle{
         @include tablet{
             display: flex;
-            justify-content: start;
+            justify-content: space-between;
             align-items: start;
-            gap: 5rem;
             width: 100%;
         }
 
@@ -84,7 +83,7 @@
             display: flex;
             justify-content: start;
             align-items: start;
-            gap: 5rem;
+            gap: 2rem;
             width: 100%;
         }
         .flex__item{

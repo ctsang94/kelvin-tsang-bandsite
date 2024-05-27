@@ -230,9 +230,8 @@ body {
 @media screen and (min-width: 768px) {
   .footer .flex__container--middle {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: start;
-    gap: 5rem;
     width: 100%;
   }
 }
@@ -241,7 +240,7 @@ body {
     display: flex;
     justify-content: start;
     align-items: start;
-    gap: 5rem;
+    gap: 2rem;
     width: 100%;
   }
 }
@@ -884,6 +883,7 @@ body {
   background-color: #FAFAFA;
   word-wrap: break-word;
   word-break: break-all;
+  text-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
   .form__inputcomment {
