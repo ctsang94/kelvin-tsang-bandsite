@@ -1,6 +1,6 @@
-@use "./mixins" as *;
-@use "./variables" as *;
-@use "./footer" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/footer" as *;
 
 .hero-shows {
 	background-image: url(../../assets/images/Photo-gallery-3.jpg);
