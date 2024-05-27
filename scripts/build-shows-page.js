@@ -1,5 +1,5 @@
 const populateShows = async () => {
-	try{
+	try {
 		shows = await myConnection.fetchShows();
 		console.log(shows)
 
@@ -57,26 +57,17 @@ const populateShows = async () => {
 
 			showContainer.appendChild(buttonElement);
 		});
-	} catch (error){
+
+		const items = document.querySelectorAll(".show__container");
+		items.forEach((show) => {
+			show.addEventListener("click", handleItemClick);
+		});
+
+	} catch (error) {
 		console.log(error);
 	}
 }
 
-
-populateShows();
-
-// const dateLabel = document.querySelector(".show__container--dateLabel");
-// dateLabel.classList.remove("hideLabel");
-// const venueLabel = document.querySelector(".show__container--venueLabel");
-// venueLabel.classList.remove("hideLabel");
-// const locationLabel = document.querySelector(".show__container--locationLabel");
-// locationLabel.classList.remove("hideLabel");
-
-
-const items = document.querySelectorAll(".show__container");
-items.forEach((show) => {
-	show.addEventListener("click", handleItemClick);
-});
 
 function handleItemClick(event) {
 	const shows = document.querySelectorAll(".show__container");
@@ -84,4 +75,6 @@ function handleItemClick(event) {
 	shows.forEach((item) => item.classList.remove("selected"));
 	event.currentTarget.classList.add("selected");
 }
+
+populateShows();
 
